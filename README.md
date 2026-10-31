@@ -1,5 +1,5 @@
-<<<<<<< HEAD
-# Vinfonette
-=======
-"# vinfonette-placement-portal" 
->>>>>>> 9dd28ec (first commit)
+#Vinfonette
+
+##Vinfonette Placement Portal
+
+A web-based placement portal project
