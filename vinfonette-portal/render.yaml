@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: vinfonette-portal
+    runtime: node
+    plan: starter
+    buildCommand: npm ci && npm run build
+    startCommand: npm start
+    healthCheckPath: /api/health
+    disk:
+      name: vinfonette-data
+      mountPath: /var/data
+      sizeGB: 1
+    envVars:
+      - key: VINFONETTE_DATA_DIR
+        value: /var/data/vinfonette/data

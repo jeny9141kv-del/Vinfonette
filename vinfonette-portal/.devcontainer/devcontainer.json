@@ -1,0 +1,23 @@
+{
+  "name": "VinfoNette Placement Portal",
+  "image": "mcr.microsoft.com/devcontainers/base:bookworm",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "24"
+    }
+  },
+  "containerEnv": {
+    "CODESPACES": "true",
+    "VITE_CODESPACES": "true"
+  },
+  "forwardPorts": [3000],
+  "portsAttributes": {
+    "3000": {
+      "label": "VinfoNette website",
+      "onAutoForward": "notify",
+      "protocol": "https"
+    }
+  },
+  "postCreateCommand": "npm ci",
+  "postStartCommand": "bash scripts/start-codespaces.sh"
+}
